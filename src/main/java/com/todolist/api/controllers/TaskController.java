@@ -34,7 +34,7 @@ public class TaskController {
 		return service.listar();
 	}
 	
-	@GetMapping("/atividades/{id}")
+	@GetMapping("/tasks/{id}")
 	public ResponseEntity<Task> BuscarPorId(@PathVariable Long id) {
 		Optional<Task> task = service.findById(id);
 		if(task.isPresent()) {
