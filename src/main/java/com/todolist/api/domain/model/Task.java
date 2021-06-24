@@ -1,6 +1,6 @@
 package com.todolist.api.domain.model;
 
-import java.sql.Timestamp;
+
 import java.time.LocalDateTime;
 
 import javax.persistence.Entity;
@@ -15,7 +15,7 @@ public class Task {
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
 	private Long id;
 	private String descricao;
-	private Timestamp dataHora;
+	private LocalDateTime data;
 	private boolean concluida;
 	
 	
@@ -31,11 +31,11 @@ public class Task {
 	public void setDescricao(String descricao) {
 		this.descricao = descricao;
 	}
-	public Timestamp getDataHora() {
-		return dataHora;
+	public LocalDateTime getData() {
+		return data;
 	}
-	public void setDataHora(Timestamp dataHora) {
-		this.dataHora = dataHora;
+	public void setData(LocalDateTime dataHora) {
+		this.data = dataHora;
 	}
 	public boolean isConcluida() {
 		return concluida;
